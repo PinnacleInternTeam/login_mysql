@@ -16,12 +16,10 @@ export default function Register() {
       password: password,
     }).then((response) => {
       // setRegisterStatus(response);
-      // console.log(response);
-      if(response.data.message){
-        setRegisterStatus(response.data.message);
-      }else{
-        setRegisterStatus("ACCOUNT CREATED SUCCESSFULLY");
-      }
+      console.log(response);
+      
+        setRegisterStatus("account created");
+      
     })
   }
 

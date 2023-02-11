@@ -20,16 +20,18 @@ app.post('/register', (req, res) => {
     con.query("INSERT INTO users (email, username, password) VALUES (?, ?, ?)", [email, username, password], 
         (err, result) => {
             if(result){
+                console.log(result)
+               
                 res.send(result);
             }else{
-                res.send({message: "ENTER CORRECT ASKED DETAILS!"})
+                res.send({message: "error "})
             }
         }
     )
 })
 
 app.listen(5000, () => {
-    console.log("running backend server");
+    console.log("running backend server at port 5000");
 })
         
 
